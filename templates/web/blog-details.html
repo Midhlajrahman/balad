@@ -1,0 +1,413 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block content %}
+    <div class="mobile-bottom-wrapper">
+        <ul>
+            <li class="search-bar">
+                <a class="search-btn">
+                    <div class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.9379 1.93066C8.55343 1.93466 6.26777 2.88366 4.5817 4.56974C2.89562 6.25581 1.94662 8.54147 1.94263 10.9259C1.94462 13.3124 2.89249 15.6008 4.57857 17.2897C6.26465 18.9786 8.55143 19.9303 10.9379 19.9363C13.0544 19.9363 15.0047 19.1918 16.5467 17.9596L21.4104 22.8236C21.6001 23 21.8509 23.0961 22.1099 23.0915C22.369 23.087 22.6162 22.9822 22.7997 22.7993C22.9831 22.6163 23.0885 22.3694 23.0938 22.1103C23.099 21.8513 23.0036 21.6003 22.8277 21.4101L17.964 16.5423C19.2433 14.9514 19.9407 12.9712 19.9407 10.9297C19.9407 5.97098 15.8966 1.93066 10.9379 1.93066ZM10.9379 3.93381C14.8157 3.93381 17.9376 7.05193 17.9376 10.9259C17.9376 14.8 14.8157 17.937 10.9379 17.937C7.06011 17.937 3.942 14.8113 3.942 10.9335C3.942 7.0557 7.06011 3.93381 10.9379 3.93381Z" />
+                        </svg>
+                    </div>
+                    <span>Search</span>
+                </a>
+                <div class="search-input">
+                    <div class="serch-close"></div>
+                    <form>
+                        <div class="search-group">
+                            <div class="form-inner2">
+                                <input type="text" placeholder="Enter your keywords">
+                                <button type="submit"><i class="bi bi-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="quick-search">
+                            <ul>
+                                <li>Quick Search :</li>
+                                <li><a href="categories2.html">Men,</a></li>
+                                <li><a href="categories2.html">Women,</a></li>
+                                <li><a href="categories2.html">kids.</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <li>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#user-login">
+                    <div class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.6182 11.1284C17.1538 10.0084 18.1539 8.19581 18.1539 6.15384C18.1539 2.76061 15.3933 0 12 0C8.60678 0 5.84618 2.76061 5.84618 6.15384C5.84618 8.19581 6.84616 10.0084 8.38188 11.1284C4.56438 12.5892 1.84619 16.2905 1.84619 20.6154C1.84619 22.4817 3.36452 24 5.2308 24H18.7692C20.6355 24 22.1538 22.4817 22.1538 20.6154C22.1538 16.2905 19.4357 12.5892 15.6182 11.1284ZM7.69235 6.15384C7.69235 3.77859 9.62477 1.84617 12 1.84617C14.3753 1.84617 16.3077 3.77859 16.3077 6.15384C16.3077 8.52909 14.3753 10.4616 12 10.4616C9.62477 10.4616 7.69235 8.52909 7.69235 6.15384ZM18.7692 22.1538H5.2308C4.3825 22.1538 3.69236 21.4637 3.69236 20.6153C3.69236 16.0344 7.41911 12.3076 12.0001 12.3076C16.581 12.3076 20.3078 16.0344 20.3078 20.6153C20.3077 21.4637 19.6176 22.1538 18.7692 22.1538Z" />
+                        </svg>
+                    </div>
+                    <span>User</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <span class="number">3</span>
+                        <svg class="cart" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.5 6.375H19.5M8.25 6.375V4.6875C8.25 2.61642 9.92892 0.9375 12 0.9375C14.0711 0.9375 15.75 2.61642 15.75 4.6875V6.375M15.75 10.125C15.75 12.1961 14.0711 13.875 12 13.875C9.92892 13.875 8.25 12.1961 8.25 10.125"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M19.5 6.375L21.3602 20.9507C21.3701 21.0293 21.375 21.1083 21.375 21.1875C21.375 22.223 20.5355 23.0625 19.5 23.0625H4.5C3.46448 23.0625 2.625 22.223 2.625 21.1875C2.625 21.1073 2.63002 21.0283 2.63981 20.9507L4.5 6.375"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <span>Cart</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon">
+                        <span class="number">3</span>
+                        <svg width="32" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.0006 21.8394C15.5701 21.8402 15.1436 21.777 14.7459 21.6535C14.3481 21.5299 13.9869 21.3485 13.6832 21.1197L3.0819 13.1685C1.50782 11.9879 0.640625 10.4183 0.640625 8.74837V8.65069C0.640625 6.98077 1.50782 5.41093 3.0819 4.23061C4.65598 3.05029 6.74942 2.39941 8.97502 2.39941H9.10622C11.3318 2.39941 13.4253 3.04981 14.9993 4.23037L16.0006 4.98133L17.0019 4.23037C18.576 3.04981 20.6694 2.39941 22.895 2.39941H23.0262C25.2518 2.39941 27.3453 3.04981 28.9193 4.23037C30.4934 5.41093 31.3606 6.98053 31.3606 8.65045V8.74813C31.3606 10.4181 30.4934 11.9879 28.9193 13.1682L18.3181 21.1194C18.0144 21.3483 17.6532 21.5298 17.2555 21.6534C16.8577 21.777 16.4312 21.8402 16.0006 21.8394ZM15.0406 20.1013C15.5552 20.4865 16.447 20.4856 16.9606 20.1011L27.5619 12.1506C28.1593 11.7048 28.633 11.1745 28.9554 10.5906C29.2779 10.0066 29.4428 9.38045 29.4406 8.74837V8.65069C29.4406 7.36549 28.7731 6.15733 27.5619 5.24869C26.3507 4.34005 24.7392 3.83941 23.0262 3.83941H22.895C22.0523 3.83763 21.2175 3.96126 20.439 4.20312C19.6604 4.44499 18.9536 4.80029 18.3593 5.24845L16.6793 6.50845C16.5902 6.57535 16.4844 6.62841 16.368 6.66462C16.2515 6.70082 16.1267 6.71946 16.0006 6.71946C15.8746 6.71946 15.7497 6.70082 15.6333 6.66462C15.5168 6.62841 15.411 6.57535 15.3219 6.50845L13.6419 5.24845C13.0477 4.80029 12.3408 4.44499 11.5623 4.20312C10.7837 3.96126 9.94893 3.83763 9.10622 3.83941H8.97502C7.26206 3.83941 5.65055 4.33957 4.43935 5.24845C3.22815 6.15733 2.56062 7.36525 2.56062 8.65045V8.74813C2.55837 9.38018 2.72325 10.0063 3.04573 10.5902C3.36821 11.1742 3.84188 11.7044 4.43935 12.1501L15.0406 20.1013Z" />
+                        </svg>
+                    </div>
+                    <span>Wishlist</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- hearder section ends here -->
+    <!-- breadcrumb section strats here -->
+    <div class="breadcrumb-section mb-100"
+        style="background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(assets/image/inner-page/blog-gride-breadcrumbs-image.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="banner-content style-2 text-center">
+                        <h1>Winter Fashion Forecast: What’s Hot This Season</h1>
+                        <ul class="breadcrumb-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><span>/ </span>Blog Details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb section ends here -->
+    <!-- Start Blog Details Page section -->
+    <div class="details-page-wrapper pb-120">
+        <div class="container-lg container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="post-author-meta">
+                        <div class="author-and-date">
+                            <div class="author-area">
+                                <div class="author-img">
+                                    <img src="assets/image/inner-page/author-image.png" alt="">
+                                </div>
+                                <div class="author-name-desig">
+                                    <span>Admin</span>
+                                    <h6><a href="blog-grid.html">Mr. Daniel Scoot</a></h6>
+                                </div>
+                            </div>
+                            <div class="date">
+                                <span>Date</span>
+                                <h6>02 Dec, 2023</h6>
+                            </div>
+                        </div>
+                        <div class="social-area d-sm-flex d-none">
+                            <h6>Share:</h6>
+                            <ul class="social-link">
+                                <li>
+                                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt'></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="line-break"></span>
+                    <span class="line-break"></span>
+                    <div class="post-thumb">
+                        <img src="assets/image/inner-page/blog-details-image.jpg" alt="">
+                    </div>
+                    <span class="line-break"></span>
+                    <span class="line-break"></span>
+                    <div class="details-page-content mb-120">
+                        <h3>Winter Fashion Forecast: What’s Hot This Season</h3>
+                        <span class="line-break"></span>
+                        <p>As we reflect on this achievement, we look forward to continuing our journey of digital innovation, creating transformative solutions, and shaping the future of the digital landscape. Celebrating a major milestone in digital services is a significant occasion. This milestone is a testament to the hard work, creativity, and dedication of our incredible team and the unwavering support from our clients and partners. We are grateful for the trust placed in us and the collaborative efforts that have fueled our success.</p>
+                        <span class="line-break"></span>
+                        <p>Creating transformative solutions, and shaping the future of the digital landscape.
+                            Celebrating a major milestone in digital services is a significant occasion .</p>
+                        <span class="line-break"></span>
+                        <span class="line-break"></span>
+                        <span class="line-break"></span>
+                        <div class="row g-lg-4 gy-5 align-items-center">
+                            <div class="col-lg-6">
+                                <h4>Key Characteristics :</h4>
+                                <span class="line-break"></span>
+                                <ul>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path
+                                                    d="M8 15C6.14348 15 4.36301 14.2625 3.05025 12.9497C1.7375 11.637 1 9.85652 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8C15 9.85652 14.2625 11.637 12.9497 12.9497C11.637 14.2625 9.85652 15 8 15ZM8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16Z" />
+                                                <path
+                                                    d="M10.9684 4.96979C10.9613 4.9767 10.9546 4.98404 10.9484 4.99179L7.47539 9.41679L5.38239 7.32279C5.24021 7.19031 5.05216 7.11819 4.85786 7.12162C4.66356 7.12505 4.47818 7.20376 4.34076 7.34117C4.20335 7.47858 4.12464 7.66397 4.12121 7.85827C4.11778 8.05257 4.18991 8.24062 4.32239 8.38279L6.96839 11.0298C7.03967 11.1009 7.12455 11.157 7.21797 11.1946C7.31139 11.2323 7.41143 11.2507 7.51213 11.2488C7.61283 11.247 7.71212 11.2249 7.80408 11.1838C7.89604 11.1427 7.97879 11.0835 8.04739 11.0098L12.0394 6.01979C12.1753 5.87712 12.2496 5.68669 12.2463 5.48966C12.2429 5.29263 12.1622 5.10484 12.0214 4.96689C11.8807 4.82893 11.6914 4.7519 11.4943 4.75244C11.2973 4.75299 11.1083 4.83106 10.9684 4.96979Z" />
+                                            </g>
+                                        </svg>
+                                        <span>Residential real estate involves properties used for housing and includes
+                                            single-family homes.</span>
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path
+                                                    d="M8 15C6.14348 15 4.36301 14.2625 3.05025 12.9497C1.7375 11.637 1 9.85652 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8C15 9.85652 14.2625 11.637 12.9497 12.9497C11.637 14.2625 9.85652 15 8 15ZM8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16Z" />
+                                                <path
+                                                    d="M10.9684 4.96979C10.9613 4.9767 10.9546 4.98404 10.9484 4.99179L7.47539 9.41679L5.38239 7.32279C5.24021 7.19031 5.05216 7.11819 4.85786 7.12162C4.66356 7.12505 4.47818 7.20376 4.34076 7.34117C4.20335 7.47858 4.12464 7.66397 4.12121 7.85827C4.11778 8.05257 4.18991 8.24062 4.32239 8.38279L6.96839 11.0298C7.03967 11.1009 7.12455 11.157 7.21797 11.1946C7.31139 11.2323 7.41143 11.2507 7.51213 11.2488C7.61283 11.247 7.71212 11.2249 7.80408 11.1838C7.89604 11.1427 7.97879 11.0835 8.04739 11.0098L12.0394 6.01979C12.1753 5.87712 12.2496 5.68669 12.2463 5.48966C12.2429 5.29263 12.1622 5.10484 12.0214 4.96689C11.8807 4.82893 11.6914 4.7519 11.4943 4.75244C11.2973 4.75299 11.1083 4.83106 10.9684 4.96979Z" />
+                                            </g>
+                                        </svg>
+                                        <span>With a focus on technology, digital agencies have teams skilled in web
+                                            developmen.</span>
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path
+                                                    d="M8 15C6.14348 15 4.36301 14.2625 3.05025 12.9497C1.7375 11.637 1 9.85652 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8C15 9.85652 14.2625 11.637 12.9497 12.9497C11.637 14.2625 9.85652 15 8 15ZM8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16Z" />
+                                                <path
+                                                    d="M10.9684 4.96979C10.9613 4.9767 10.9546 4.98404 10.9484 4.99179L7.47539 9.41679L5.38239 7.32279C5.24021 7.19031 5.05216 7.11819 4.85786 7.12162C4.66356 7.12505 4.47818 7.20376 4.34076 7.34117C4.20335 7.47858 4.12464 7.66397 4.12121 7.85827C4.11778 8.05257 4.18991 8.24062 4.32239 8.38279L6.96839 11.0298C7.03967 11.1009 7.12455 11.157 7.21797 11.1946C7.31139 11.2323 7.41143 11.2507 7.51213 11.2488C7.61283 11.247 7.71212 11.2249 7.80408 11.1838C7.89604 11.1427 7.97879 11.0835 8.04739 11.0098L12.0394 6.01979C12.1753 5.87712 12.2496 5.68669 12.2463 5.48966C12.2429 5.29263 12.1622 5.10484 12.0214 4.96689C11.8807 4.82893 11.6914 4.7519 11.4943 4.75244C11.2973 4.75299 11.1083 4.83106 10.9684 4.96979Z" />
+                                            </g>
+                                        </svg>
+                                        <span>Digital agencies explore innovative strategies and technologies to keep
+                                            campaigns fresh.</span>
+                                    </li>
+                                    <li>
+                                        <svg width="16" height="16" viewBox="0 0 16 16"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path
+                                                    d="M8 15C6.14348 15 4.36301 14.2625 3.05025 12.9497C1.7375 11.637 1 9.85652 1 8C1 6.14348 1.7375 4.36301 3.05025 3.05025C4.36301 1.7375 6.14348 1 8 1C9.85652 1 11.637 1.7375 12.9497 3.05025C14.2625 4.36301 15 6.14348 15 8C15 9.85652 14.2625 11.637 12.9497 12.9497C11.637 14.2625 9.85652 15 8 15ZM8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34315C12.1566 0.842855 10.1217 0 8 0C5.87827 0 3.84344 0.842855 2.34315 2.34315C0.842855 3.84344 0 5.87827 0 8C0 10.1217 0.842855 12.1566 2.34315 13.6569C3.84344 15.1571 5.87827 16 8 16Z" />
+                                                <path
+                                                    d="M10.9684 4.96979C10.9613 4.9767 10.9546 4.98404 10.9484 4.99179L7.47539 9.41679L5.38239 7.32279C5.24021 7.19031 5.05216 7.11819 4.85786 7.12162C4.66356 7.12505 4.47818 7.20376 4.34076 7.34117C4.20335 7.47858 4.12464 7.66397 4.12121 7.85827C4.11778 8.05257 4.18991 8.24062 4.32239 8.38279L6.96839 11.0298C7.03967 11.1009 7.12455 11.157 7.21797 11.1946C7.31139 11.2323 7.41143 11.2507 7.51213 11.2488C7.61283 11.247 7.71212 11.2249 7.80408 11.1838C7.89604 11.1427 7.97879 11.0835 8.04739 11.0098L12.0394 6.01979C12.1753 5.87712 12.2496 5.68669 12.2463 5.48966C12.2429 5.29263 12.1622 5.10484 12.0214 4.96689C11.8807 4.82893 11.6914 4.7519 11.4943 4.75244C11.2973 4.75299 11.1083 4.83106 10.9684 4.96979Z" />
+                                            </g>
+                                        </svg>
+                                        <span>The digital agency landscape is highly competitive, requiring agencies to
+                                            differentiate themselves.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="assets/image/inner-page/blog-details-image2.jpg" alt="">
+                            </div>
+                        </div>
+                        <span class="line-break"></span>
+                        <span class="line-break"></span>
+                        <span class="line-break"></span>
+                        <blockquote>
+                            <p>Digital agencies are multifaceted, offering a wide array of services to meet the
+                                evolving needs of the digital landscape businesses reach their target audience.
+                            </p>
+                            <cite>Rakhab Uddin</cite>
+                        </blockquote>
+                        <span class="line-break"></span>
+                        <span class="line-break"></span>
+                        <p>As we reflect on this moment, we express our deepest gratitude to our clients, partners, and
+                            everyone who has been a part of this incredible journey. Your trust and collaboration have
+                            been instrumental in our success, and we look forward to continuing to exceed. Digital
+                            agencies play a vital role in helping businesses navigate the digital landscape, providing
+                            expertise in online marketing, technology, and creative solutions to achieve digital
+                            success.</p>
+                        <span class="line-break"></span>
+                        <span class="line-break"></span>
+                        <span class="line-break"></span>
+                        <div class="row mb-70">
+                            <div class="col-lg-12 d-flex justify-content-sm-center justify-content-start flex-wrap gap-3">
+                                <div class="blog-tag">
+                                    <h6>Tag:</h6>
+                                    <ul>
+                                        <li><a href="blog-grid.html">Oversize Dress</a></li>
+                                        <li><a href="blog-grid.html">T -Shirt</a></li>
+                                        <li><a href="blog-grid.html">Party Dress</a></li>
+                                        <li><a href="blog-grid.html">Winter Collection</a></li>
+                                    </ul>
+                                </div>
+                                <div class="social-area d-sm-none d-flex">
+                                    <h6>Share:</h6>
+                                    <ul class="social-link">
+                                        <li>
+                                            <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://x.com/"><i class="bi bi-twitter-x"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt'></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="details-navigation">
+                                    <div class="single-navigation">
+                                        <a class="arrow" href="blog-details.html">
+                                            <svg width="7" height="14" viewBox="0 0 8 13"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z"></path>
+                                            </svg>
+                                            Prev
+                                        </a>
+                                        <div class="content">
+                                            <h6><a href="blog-details.html">Winter Fashion Forecast: What’s Hot This
+                                                    Season</a></h6>
+                                        </div>
+                                    </div>
+                                    <div class="single-navigation two text-end">
+                                        <div class="content">
+                                            <h6><a href="blog-details.html">Highlights from New York Fashion Week</a>
+                                            </h6>
+                                        </div>
+                                        <a class="arrow" href="blog-details.html">
+                                            Next
+                                            <svg width="7" height="14" viewBox="0 0 8 13"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 6.50008L0 0L5.09091 6.50008L0 13L8 6.50008Z"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="comment-and-form-area">
+                                <div class="comment-area mb-70">
+                                    <div class="comment-title">
+                                        <h4>Comments (02)</h4>
+                                    </div>
+                                    <ul class="comment">
+                                        <li>
+                                            <div class="single-comment-area">
+                                                <div class="author-img">
+                                                    <img src="assets/image/inner-page/comment-author-image.png" alt="">
+                                                </div>
+                                                <div class="comment-content">
+                                                    <div class="author-name-deg">
+                                                        <h6>Mr. Bowmik Haldar,</h6>
+                                                        <span>02 June, 2024</span>
+                                                    </div>
+                                                    <p>Organization decides to seek consulting services to address a
+                                                        particular issue or to achieve specific objectives.</p>
+                                                    <div class="replay-btn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11"
+                                                            viewBox="0 0 14 11">
+                                                            <path
+                                                                d="M8.55126 1.11188C8.52766 1.10118 8.50182 1.09676 8.47612 1.09903C8.45042 1.1013 8.42569 1.11018 8.40419 1.12486C8.3827 1.13954 8.36513 1.15954 8.35311 1.18304C8.34109 1.20653 8.335 1.23276 8.33539 1.25932V2.52797C8.33539 2.67388 8.2791 2.81381 8.17889 2.91698C8.07868 3.02016 7.94277 3.07812 7.80106 3.07812C7.08826 3.07812 5.64984 3.08362 4.27447 3.98257C3.2229 4.66916 2.14783 5.9191 1.50129 8.24735C2.59132 7.16575 3.83632 6.57929 4.92635 6.2679C5.59636 6.07737 6.28492 5.96444 6.97926 5.93121C7.26347 5.91835 7.54815 5.92129 7.83205 5.94001H7.84594L7.85129 5.94111L7.80106 6.48906L7.85449 5.94111C7.98638 5.95476 8.10864 6.01839 8.19751 6.11966C8.28638 6.22092 8.33553 6.35258 8.33539 6.48906V7.75771C8.33539 7.87654 8.45294 7.95136 8.55126 7.90515L12.8088 4.67796C12.8233 4.66692 12.8383 4.65664 12.8537 4.64715C12.8769 4.63278 12.8962 4.61245 12.9095 4.58816C12.9229 4.56386 12.9299 4.53643 12.9299 4.50851C12.9299 4.4806 12.9229 4.45316 12.9095 4.42887C12.8962 4.40458 12.8769 4.38425 12.8537 4.36988C12.8382 4.36039 12.8233 4.35011 12.8088 4.33907L8.55126 1.11188ZM7.26673 7.02381C7.19406 7.02381 7.11391 7.02711 7.02842 7.03041C6.56462 7.05242 5.92342 7.12504 5.21169 7.32859C3.79464 7.7335 2.11684 8.65116 1.00115 10.7175C0.940817 10.8291 0.844683 10.9155 0.729224 10.9621C0.613765 11.0087 0.486168 11.0124 0.368304 10.9728C0.250441 10.9331 0.149648 10.8525 0.0831985 10.7447C0.0167484 10.6369 -0.011219 10.5086 0.0040884 10.3819C0.499949 6.29981 2.01959 4.15202 3.70167 3.05391C5.03215 2.18467 6.40218 2.01743 7.26673 1.98552V1.25932C7.26663 1.03273 7.32593 0.810317 7.43839 0.615545C7.55084 0.420773 7.71227 0.260866 7.90565 0.152696C8.09902 0.0445258 8.31717 -0.00789584 8.53707 0.000962485C8.75698 0.00982081 8.97048 0.0796305 9.15506 0.203025L13.4233 3.43792C13.5998 3.55133 13.7453 3.7091 13.8462 3.8964C13.9471 4.08369 14 4.29434 14 4.50851C14 4.72269 13.9471 4.93333 13.8462 5.12063C13.7453 5.30792 13.5998 5.4657 13.4233 5.57911L9.15506 8.814C8.97048 8.9374 8.75698 9.00721 8.53707 9.01607C8.31717 9.02492 8.09902 8.9725 7.90565 8.86433C7.71227 8.75616 7.55084 8.59626 7.43839 8.40148C7.32593 8.20671 7.26663 7.9843 7.26673 7.75771V7.02381Z">
+                                                            </path>
+                                                        </svg>
+                                                        Reply (01)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <ul class="comment-replay">
+                                                <li>
+                                                    <div class="single-comment-area">
+                                                        <div class="author-img">
+                                                            <img src="assets/image/inner-page/comment-author-image2.png"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            <div class="author-name-deg">
+                                                                <h6>Jacoline Juie,</h6>
+                                                                <span>02 June, 2024</span>
+                                                            </div>
+                                                            <p>Consultants may provide hands-on support during the
+                                                                implementation phase, offering guidance, training, and
+                                                                assistance.</p>
+                                                            <div class="replay-btn">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                                                    height="11" viewBox="0 0 14 11">
+                                                                    <path
+                                                                        d="M8.55126 1.11188C8.52766 1.10118 8.50182 1.09676 8.47612 1.09903C8.45042 1.1013 8.42569 1.11018 8.40419 1.12486C8.3827 1.13954 8.36513 1.15954 8.35311 1.18304C8.34109 1.20653 8.335 1.23276 8.33539 1.25932V2.52797C8.33539 2.67388 8.2791 2.81381 8.17889 2.91698C8.07868 3.02016 7.94277 3.07812 7.80106 3.07812C7.08826 3.07812 5.64984 3.08362 4.27447 3.98257C3.2229 4.66916 2.14783 5.9191 1.50129 8.24735C2.59132 7.16575 3.83632 6.57929 4.92635 6.2679C5.59636 6.07737 6.28492 5.96444 6.97926 5.93121C7.26347 5.91835 7.54815 5.92129 7.83205 5.94001H7.84594L7.85129 5.94111L7.80106 6.48906L7.85449 5.94111C7.98638 5.95476 8.10864 6.01839 8.19751 6.11966C8.28638 6.22092 8.33553 6.35258 8.33539 6.48906V7.75771C8.33539 7.87654 8.45294 7.95136 8.55126 7.90515L12.8088 4.67796C12.8233 4.66692 12.8383 4.65664 12.8537 4.64715C12.8769 4.63278 12.8962 4.61245 12.9095 4.58816C12.9229 4.56386 12.9299 4.53643 12.9299 4.50851C12.9299 4.4806 12.9229 4.45316 12.9095 4.42887C12.8962 4.40458 12.8769 4.38425 12.8537 4.36988C12.8382 4.36039 12.8233 4.35011 12.8088 4.33907L8.55126 1.11188ZM7.26673 7.02381C7.19406 7.02381 7.11391 7.02711 7.02842 7.03041C6.56462 7.05242 5.92342 7.12504 5.21169 7.32859C3.79464 7.7335 2.11684 8.65116 1.00115 10.7175C0.940817 10.8291 0.844683 10.9155 0.729224 10.9621C0.613765 11.0087 0.486168 11.0124 0.368304 10.9728C0.250441 10.9331 0.149648 10.8525 0.0831985 10.7447C0.0167484 10.6369 -0.011219 10.5086 0.0040884 10.3819C0.499949 6.29981 2.01959 4.15202 3.70167 3.05391C5.03215 2.18467 6.40218 2.01743 7.26673 1.98552V1.25932C7.26663 1.03273 7.32593 0.810317 7.43839 0.615545C7.55084 0.420773 7.71227 0.260866 7.90565 0.152696C8.09902 0.0445258 8.31717 -0.00789584 8.53707 0.000962485C8.75698 0.00982081 8.97048 0.0796305 9.15506 0.203025L13.4233 3.43792C13.5998 3.55133 13.7453 3.7091 13.8462 3.8964C13.9471 4.08369 14 4.29434 14 4.50851C14 4.72269 13.9471 4.93333 13.8462 5.12063C13.7453 5.30792 13.5998 5.4657 13.4233 5.57911L9.15506 8.814C8.97048 8.9374 8.75698 9.00721 8.53707 9.01607C8.31717 9.02492 8.09902 8.9725 7.90565 8.86433C7.71227 8.75616 7.55084 8.59626 7.43839 8.40148C7.32593 8.20671 7.26663 7.9843 7.26673 7.75771V7.02381Z">
+                                                                    </path>
+                                                                </svg>
+                                                                Reply
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="inquiry-form">
+                                    <div class="title">
+                                        <h4>Leave Your Comment:</h4>
+                                    </div>
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-inner mb-25">
+                                                    <label>Your Name* </label>
+                                                    <input type="text" placeholder="Mr. Daniel">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-inner mb-25">
+                                                    <label>email address * </label>
+                                                    <input type="email" placeholder="info@example.com">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 mb-25">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="contactCheck">
+                                                    <label class="form-check-label" for="contactCheck">
+                                                        Please save <span> My Name, Email Address</span> for the next
+                                                        time I comment.
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-inner mb-50">
+                                                    <label>Your Message :</label>
+                                                    <textarea placeholder="Write your enquiry..."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-inner">
+                                            <button class="primary-btn" type="submit">
+                                                Post Comment
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog Details Page section -->
+    {% endblock %}
