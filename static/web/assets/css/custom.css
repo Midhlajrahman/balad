@@ -1,0 +1,19 @@
+.shop-details-top-section .slider-btn-groups5 .slider-btn.next-1 {
+    right: 25px;
+    left: unset;
+}
+.breadcrumb-section {
+    padding: 110px 0px 40px;
+}
+.product-card .product-card-img img{
+    height: 300px !important;
+    object-fit: cover !important;
+    width: 270px !important;
+}
+
+.product-detail-section .product-slider .product-details-slider .slider-img img{
+    height: 550px !important;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 6px !important;
+}

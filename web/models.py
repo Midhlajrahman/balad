@@ -36,3 +36,43 @@ class Blog(models.Model):
         verbose_name = 'Blog'
         verbose_name_plural = 'Blogs'
     
+    
+class Banner(models.Model):
+    title = models.CharField(max_length=180, blank=True, null=True)
+    sub_title = models.CharField(max_length=180, blank=True, null=True)
+    image = models.ImageField(upload_to="banner/")
+    
+    def __str__(self):
+        return self.title if self.title else f"Banner {self.id}"
+
+    
+    class Meta:
+        verbose_name = 'Banner'
+        verbose_name_plural = 'Banners'
+    
+
+class Testimonial(models.Model):
+    name = models.CharField(max_length=180)
+    position = models.CharField(max_length=180)
+    content = models.TextField()
+    
+    def str(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Testimonial'
+        verbose_name_plural = 'Testimonials'
+        
+
+class Brand(models.Model):
+    name = models.CharField(max_length=180)
+    image = models.ImageField(upload_to="brand/")  
+    
+    def str(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Brand'
+        verbose_name_plural = 'Brands'
+        
+    
