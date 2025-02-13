@@ -1,0 +1,152 @@
+{% extends 'web/base.html' %} {% load static %} {% block title %}Cart{% endblock%} 
+{% block content %}
+
+<div class="breadcrumb-section">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                <li class="breadcrumb-item active" aria-current="page">Cart</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+
+<div class="whistlist-section cart mt-40 mb-40">
+    {% if cart_items %}
+    <div class="container">
+        <div class="row mb-50">
+            <div class="col-12">
+                <div class="whistlist-table">
+                    <table class="eg-table2">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>   
+                        </thead>
+                        <tbody>
+                            {% for item in cart_items %}
+                            <tr>
+                                
+                                <td>
+                                    <a href="{% url 'web:clear_cart_item' item.product.id %}" class="cart-delete-btn">
+                                    <div class="delete-icon">
+                                        <i class="bi bi-x-lg"></i>
+                                    </div></a>
+                                </td>
+                            
+                                <td data-label="Product" class="table-product">
+                                    <div class="product-content">
+                                        <h6><a href="{{ item.product.product.get_absolute_url }}">{{ item.product.product.name }}</a></h6>
+                                    </div>
+                                    <div class="product-img">
+                                        <img src="{{ item.product.product.image.url }}" alt="{{ item.product.name }}" >
+                                    </div>
+                                   
+                                </td>
+                                <td data-label="Price">
+                                    <p class="price">
+                                        <del> ₹{{ item.product.regular_price|floatformat:0 }}</del>
+                                        {{ item.product.weight }}  {{ item.product.unit }} / ₹{{ item.product.sale_price|floatformat:0 }}
+                                    </p>
+                                </td>
+                                <td data-label="Quantity">
+                                    <div class="quantity-counter">
+                                        <a href="#" class="quantity__minus cart-minus-btn" data-product_id="{{ item.product.id }}" data-cart-id="{{ item.id }}"><i class="bx bx-minus"></i></a>
+                                        <input name="quantity" type="text" class="quantity__input quantity-field form-control-sm form-input" step="1" id="quantity-{{ item.product.id }}" min="1" disabled value="{{ item.quantity }}">
+                                        <a href="#" class="quantity__plus cart-add-btn" data-product_id="{{ item.product.id }}"><i class="bx bx-plus"></i></a>
+                                    </div>
+                                </td>
+                                <td data-label="Total" id="total-{{ item.product.id }}">
+                                    ₹{{item.total_price|floatformat:2}}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <a href="{% url 'web:clear_cart' %}">
+                    <button type="submit" class="clear-cart-btn wishlist-btn primary-btn1 style-3 hover-btn4 mt-3">Clear Cart</button>
+                </a>
+                
+           
+            </div>
+        </div>
+        <div class="row g-4">
+            {% comment %} <div class="col-lg-4">
+                <div class="coupon-area">
+                    <div class="cart-coupon-input">
+                        <h5>Coupon Code</h5>
+                        <form>
+                            <div class="form-inner">
+                                <input type="text" placeholder="Coupon Code">
+                                <button type="submit" class="primary-btn1 hover-btn3">Apply Code</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> {% endcomment %}
+            <div class="col-lg-12">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Cart Total</th>
+                            <th></th>
+                            <th id="cart_total">₹{{cart_total|floatformat:2}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Service Fee</td>
+                            <td>
+                                <ul class="cost-list text-start">
+                                    {% comment %} <li>Service Fee</li> {% endcomment %}
+                                    
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="single-cost text-center">
+                                    <li id="service_fee"> ₹0.00</li>
+                                    <li></li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td></td>
+                            <td id ="sub_total"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="{% url 'web:checkout' %}">
+                <button type="submit" class="primary-btn1 hover-btn3">Go to Checkout</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% else %}
+        <div class="py-3">
+          <div class="text-center">
+            <img src="{% static 'assets/images/assets/cart.png' %}" alt="keralathengu" class="img-responsive img-fluid">
+            <h3>Your cart is empty</h3>
+            <div class="text-center">
+                <a href="">
+                    <button type="submit" class="primary-btn1 hover-btn3">Continue Shopping</button>
+                    </a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+</div>
+
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'web/js/cart.js'  %}{{current_version}}"></script>
+{% endblock %}

@@ -192,6 +192,9 @@
                                 </div>
                             </div>
                             
+                            
+
+
                             <div class="quantity-color">
                                 <div class="quantity-area">
                                     <div class="quantity">
@@ -449,7 +452,8 @@
     <!-- product card section ends here -->
 
     {% block js %}
-    
+    <script src="{% static 'web/js/product_detail.js'  %}{{current_version}}"></script>
+    <script src="{% static 'web/js/index.js'  %}{{current_version}}"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let selectedSize = document.querySelector(".size-option.selected");
@@ -501,4 +505,5 @@
         </script>
         
         {% endblock js %}
+        
     {% endblock  %}
